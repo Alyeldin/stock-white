@@ -1,18 +1,28 @@
 /* -------------------------------------- */
-/* Custom Styles Extracted from index.html */
+/* Global Variables and Styles */
 /* -------------------------------------- */
+
+/* Define a CSS variable for the navbar height (approximate, adjust if needed) */
+:root {
+    --navbar-height: 100px; /* Based on the logo height="90" plus padding */
+}
+
+/* 1. Body padding to prevent content from being hidden under the fixed header */
+body {
+    padding-top: var(--navbar-height);
+}
 
 /* 1. Add shadow to the fixed navbar */
 .fixed-top {
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Small shadow down */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Small shadow down */
 }
 
-/* Navigation Links (Extracted from inline style) */
+/* Navigation Links */
 .custom-nav-link {
     font-family: 'Bodoni PT', serif; 
     font-size: 1.3rem;
-    position: relative; /* Needed for the underline animation */
-    padding-bottom: 5px !important; /* Adjust padding to make room for underline */
+    position: relative; 
+    padding-bottom: 5px !important; 
 }
 
 /* 2. Underline animation for Home/Products/About buttons on hover */
@@ -31,34 +41,86 @@
     width: 100%;
 }
 
-/* Three Columns of Text Images (Extracted from inline style) */
+/* Three Columns of Text Images (Original index.html) */
 .item-image {
     object-fit: cover;
 }
 
-/* Footer (Extracted from inline style) */
-.custom-footer {
-    width: 100%;
-}
-
-/* Footer Social Icons (Extracted from inline style) */
-.custom-social-icon {
-    color: black;
-}
 
 /* ================== */
-/* CAROUSEL STYLES    */
-/* (Extracted from internal <style> block) */
+/* PRODUCTS PAGE STYLES (New) */
 /* ================== */
 
-/* 4. Ensure the slider image is full size (already defined, but confirmed here) */
-/* Make carousel slides take full viewport height and darken images slightly */
+
+/* ... existing CSS ... */
+
+/* ================== */
+/* PRODUCTS PAGE STYLES (New) */
+/* ================== */
+
+/* Styling for product images within cards */
+.product-card-img {
+    width: 100%;       /* Ensure image takes full width of its container */
+    height: 225px;     /* Match the original SVG height for consistency */
+    object-fit: cover; /* Crop the image to cover the area without distortion */
+    border-top-left-radius: calc(.25rem - 1px); /* Match Bootstrap card corner radius */
+    border-top-right-radius: calc(.25rem - 1px);
+}
+
+/* Center Card Content for the Products Page (album section) */
+.album .card-body {
+    text-align: center; /* Center text and inline elements */
+}
+
+/* Center the button group within the card */
+.album .card-body .d-flex {
+    justify-content: flex !important; 
+}
+
+/* Style for the Main Call to Action button on the products page */
+.py-5.text-center.container .btn-primary {
+    background-color: #000000 !important;
+    border-color: #000000 !important;
+}
+.py-5.text-center.container .btn-primary:hover {
+    background-color: #333333 !important;
+    border-color: #333333 !important;
+}
+
+/* ... rest of your CSS ... */
+
+/* 2. Center Card Content for the Products Page (album section) */
+.album .card-body {
+    text-align: center; /* Center text and inline elements */
+}
+
+/* Center the button group within the card */
+.album .card-body .d-flex {
+    justify-content: flex !important; 
+}
+
+/* 3. Style for the Main Call to Action button on the products page */
+/* Targeting the first btn-primary in the hero section of the products page */
+.py-5.text-center.container .btn-primary {
+    background-color: #000000 !important;
+    border-color: #000000 !important;
+}
+.py-5.text-center.container .btn-primary:hover {
+    background-color: #333333 !important;
+    border-color: #333333 !important;
+}
+
+
+/* ================== */
+/* CAROUSEL STYLES (Original index.html) */
+/* ================== */
+
+/* Make carousel take up the REMAINING viewport height below the fixed navbar */
 .carousel,
 .carousel-inner,
 .carousel-item {
-    height: 100%;
-    padding-top: 34px;
-    
+    /* Use calc(100% of viewport height - navbar height) */
+    height: calc(100vh - var(--navbar-height));
 }
 
 .carousel-item {
@@ -66,10 +128,10 @@
 }
 
 .carousel-item img {
-
-    height: 100%;
+    /* Image height will now match the new calculated carousel height */
+    height: calc(100vh - var(--navbar-height));
     width: 100%;
-    object-fit: cover;
+    object-fit: cover; 
     filter: brightness(0.65); /* darker */
 }
 
@@ -93,11 +155,10 @@
 
 
 /* ================== */
-/* FEATURETTE STYLES  */
-/* (Extracted from internal <style> block) */
+/* FEATURETTE STYLES (Original index.html) */
 /* ================== */
 
-/* 3. Button in the col-md-7 div (the Jumbotron button) to have a black background */
+/* Button in the col-md-7 div (the Jumbotron button) to have a black background */
 .jumbotron-inner .btn-primary {
     background-color: #000000 !important;
     border-color: #000000 !important;
@@ -177,4 +238,17 @@
     .featurette-image-bg { 
         min-height: 500px; 
     }
+}
+
+
+/* ================== */
+/* FOOTER STYLES (Global) */
+/* ================== */
+
+.custom-footer {
+    width: 100%;
+}
+
+.custom-social-icon {
+    color: black;
 }

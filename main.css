@@ -7,12 +7,12 @@
     --navbar-height: 100px; /* Based on the logo height="90" plus padding */
 }
 
-/* 1. Body padding to prevent content from being hidden under the fixed header */
+/* Body padding to prevent content from being hidden under the fixed header */
 body {
     padding-top: var(--navbar-height);
 }
 
-/* 1. Add shadow to the fixed navbar */
+/* Add shadow to the fixed navbar */
 .fixed-top {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Small shadow down */
 }
@@ -25,7 +25,7 @@ body {
     padding-bottom: 5px !important; 
 }
 
-/* 2. Underline animation for Home/Products/About buttons on hover */
+/* Underline animation for Home/Products/About buttons on hover */
 .custom-nav-link::after {
     content: '';
     position: absolute;
@@ -48,28 +48,55 @@ body {
 
 
 /* ================== */
-/* PRODUCTS PAGE STYLES (New) */
+/* PRODUCTS PAGE STYLES */
 /* ================== */
 
+/* Products Hero Section Styling (Background image and text color/boldness) */
+.products-hero {
+    background-image: url('images/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative; /* Needed for pseudo-element overlay */
+    padding-top: 200px !important; 
+    padding-bottom: 30px !important; 
+    
+    color: #fff; /* Ensure text is white by default in this section */
+}
 
-/* ... existing CSS ... */
+/* Overlay to darken the background image for readability */
+.products-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Darker overlay */
+    z-index: 0; /* Place behind text content */
+}
 
-/* ================== */
-/* PRODUCTS PAGE STYLES (New) */
-/* ================== */
+/* Ensure content is above the overlay */
+.products-hero .container {
+    position: relative;
+    z-index: 1; 
+}
+
+/* Text color is handled by Bootstrap's text-white class and default font weight */
+
 
 /* Styling for product images within cards */
 .product-card-img {
     width: 100%;       /* Ensure image takes full width of its container */
     height: 225px;     /* Match the original SVG height for consistency */
     object-fit: cover; /* Crop the image to cover the area without distortion */
-    border-top-left-radius: calc(.25rem - 1px); /* Match Bootstrap card corner radius */
+    border-top-left-radius: calc(.25rem - 1px); 
     border-top-right-radius: calc(.25rem - 1px);
 }
 
 /* Center Card Content for the Products Page (album section) */
 .album .card-body {
-    text-align: center; /* Center text and inline elements */
+    text-align: flex; /* Center text and inline elements */
 }
 
 /* Center the button group within the card */
@@ -77,30 +104,7 @@ body {
     justify-content: flex !important; 
 }
 
-/* Style for the Main Call to Action button on the products page */
-.py-5.text-center.container .btn-primary {
-    background-color: #000000 !important;
-    border-color: #000000 !important;
-}
-.py-5.text-center.container .btn-primary:hover {
-    background-color: #333333 !important;
-    border-color: #333333 !important;
-}
-
-/* ... rest of your CSS ... */
-
-/* 2. Center Card Content for the Products Page (album section) */
-.album .card-body {
-    text-align: center; /* Center text and inline elements */
-}
-
-/* Center the button group within the card */
-.album .card-body .d-flex {
-    justify-content: flex !important; 
-}
-
-/* 3. Style for the Main Call to Action button on the products page */
-/* Targeting the first btn-primary in the hero section of the products page */
+/* Style for the Main Call to Action button on the products page (if re-added) */
 .py-5.text-center.container .btn-primary {
     background-color: #000000 !important;
     border-color: #000000 !important;

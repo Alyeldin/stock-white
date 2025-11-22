@@ -1,13 +1,180 @@
-.bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
+/* -------------------------------------- */
+/* Custom Styles Extracted from index.html */
+/* -------------------------------------- */
 
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
+/* 1. Add shadow to the fixed navbar */
+.fixed-top {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Small shadow down */
+}
+
+/* Navigation Links (Extracted from inline style) */
+.custom-nav-link {
+    font-family: 'Bodoni PT', serif; 
+    font-size: 1.3rem;
+    position: relative; /* Needed for the underline animation */
+    padding-bottom: 5px !important; /* Adjust padding to make room for underline */
+}
+
+/* 2. Underline animation for Home/Products/About buttons on hover */
+.custom-nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000; /* Black underline color */
+    transition: width 0.3s ease-in-out;
+}
+
+.custom-nav-link:hover::after {
+    width: 100%;
+}
+
+/* Three Columns of Text Images (Extracted from inline style) */
+.item-image {
+    object-fit: cover;
+}
+
+/* Footer (Extracted from inline style) */
+.custom-footer {
+    width: 100%;
+}
+
+/* Footer Social Icons (Extracted from inline style) */
+.custom-social-icon {
+    color: black;
+}
+
+/* ================== */
+/* CAROUSEL STYLES    */
+/* (Extracted from internal <style> block) */
+/* ================== */
+
+/* 4. Ensure the slider image is full size (already defined, but confirmed here) */
+/* Make carousel slides take full viewport height and darken images slightly */
+.carousel,
+.carousel-inner,
+.carousel-item {
+    height: 100%;
+    padding-top: 34px;
+    
+}
+
+.carousel-item {
+    position: relative;
+}
+
+.carousel-item img {
+
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(0.65); /* darker */
+}
+
+/* Keep captions above the image */
+.carousel-caption {
+    z-index: 2;
+}
+
+/* Make carousel action buttons white with black text */
+.custom-carousel-btn {
+    background-color: #ffffff !important;
+    border-color: #ffffff !important;
+    color: #000000 !important;
+}
+.custom-carousel-btn:hover,
+.custom-carousel-btn:focus {
+    background-color: #111 !important;
+    border-color: #111 !important;
+    color: #fff !important;
+}
+
+
+/* ================== */
+/* FEATURETTE STYLES  */
+/* (Extracted from internal <style> block) */
+/* ================== */
+
+/* 3. Button in the col-md-7 div (the Jumbotron button) to have a black background */
+.jumbotron-inner .btn-primary {
+    background-color: #000000 !important;
+    border-color: #000000 !important;
+}
+.jumbotron-inner .btn-primary:hover {
+    background-color: #333333 !important;
+    border-color: #333333 !important;
+}
+
+/* Jumbotron Background section */
+.jumbotron-bg {
+    background-image: url('images/cat1.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    position: relative;
+}
+.jumbotron-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.35); /* darken for readability */
+    z-index: 0;
+    border-radius: .375rem;
+}
+.jumbotron-inner { 
+    position: relative; 
+    z-index: 1; 
+}
+
+/* Dark Card Background */
+.bg-card-dark {
+    background-image: url('images/cat6.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+.bg-card-dark::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+    z-index: 0;
+    border-radius: .375rem;
+}
+
+/* Light Card Background */
+.bg-card-light {
+    background-image: url('images/cat3.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #000;
+}
+.bg-card-light::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0.35);
+    z-index: 0;
+    border-radius: .375rem;
+}
+.card-bg-inner { 
+    position: relative; 
+    z-index: 1; 
+}
+
+/* Featurette Image Placeholder/Background */
+.featurette-image-bg {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    min-height: 300px;
+    border-radius: .375rem;
+}
+
+@media (min-width: 768px) {
+    .featurette-image-bg { 
+        min-height: 500px; 
+    }
+}

@@ -9,20 +9,10 @@
         <title>Stock-White</title>
 
         <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
-
-    
-
-        <!-- Bootstrap core CSS -->
         <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
         <link href="main.css" rel="stylesheet">
-
-        <!-- Custom styles for this template -->
         <link href="styles/carousel.css" rel="stylesheet">
-
-        <style>
-        </style>
-
-    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         
     </head>
     <body>
@@ -41,13 +31,13 @@
                     <div class="collapse navbar-collapse justify-content-start" id="navbarCollapse">
                         <ul class="navbar-nav mb-2 mb-md-0">
                             <li class="nav-item">
-                                <a class="nav-link active text-dark" style="font-family: 'Bodoni PT', serif; font-size: 1.3rem;" aria-current="page" href="index.html">Home</a>
+                                <a class="nav-link active text-dark custom-nav-link" aria-current="page" href="index.html">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" style="font-family: 'Bodoni PT', serif; font-size: 1.3rem;" href="#">Products</a>
+                                <a class="nav-link text-dark custom-nav-link" href="#">Products</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" style="font-family: 'Bodoni PT', serif; font-size: 1.3rem;" href="#">About</a>
+                                <a class="nav-link text-dark custom-nav-link" href="#">About</a>
                             </li>
                         </ul>
                     </div>
@@ -55,44 +45,6 @@
             </nav>
         </header>
         <main>
-            <style>
-                /* Make carousel slides take full viewport height and darken images slightly */
-                .carousel,
-                .carousel-inner,
-                .carousel-item {
-                    height: 100vh;
-                }
-
-                .carousel-item {
-                    position: relative;
-                }
-
-                .carousel-item img {
-                    height: 100vh;
-                    width: 100%;
-                    object-fit: cover;
-                    filter: brightness(0.65); /* darker */
-                }
-
-                /* Keep captions above the image */
-                .carousel-caption {
-                    z-index: 2;
-                }
-
-                /* Make carousel action buttons black with white text */
-                .btn.btn-lg.btn-primary {
-                    background-color: #ffffff !important;
-                    border-color: #ffffff !important;
-                    color: #000000 !important;
-                }
-                .btn.btn-lg.btn-primary:hover,
-                .btn.btn-lg.btn-primary:focus {
-                    background-color: #111 !important;
-                    border-color: #111 !important;
-                    color: #fff !important;
-                }
-            </style>
-
             <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -101,35 +53,32 @@
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <!-- Replace slide1.jpg with your actual image file name in the images folder -->
                         <img src="images/slider2.jpg" class="d-block w-100" alt="Slide 1">
                         <div class="container">
                             <div class="carousel-caption text-start">
                                 <h1>New Collection.</h1>
                                 <p>Discover the latest trends in our new collection.</p>
-                                <p><a class="btn btn-lg btn-primary" href="#">Discover More</a></p>
+                                <p><a class="btn btn-lg btn-primary custom-carousel-btn" href="#">Discover More</a></p>
                             </div>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <!-- Replace slide2.jpg with your actual image file name in the images folder -->
                         <img src="images/slider1.jpg" class="d-block w-100" alt="Slide 2">
                         <div class="container">
                             <div class="carousel-caption">
                                 <h1>Look Good, Feel Good.</h1>
                                 <p>Some representative placeholder content for the second slide of the carousel.</p>
-                                <p><a class="btn btn-lg btn-primary" href="#">Find More</a></p>
+                                <p><a class="btn btn-lg btn-primary custom-carousel-btn" href="#">Find More</a></p>
                             </div>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <!-- Replace slide3.jpg with your actual image file name in the images folder -->
                         <img src="images/slider3.jpg" class="d-block w-100" alt="Slide 3">
                         <div class="container">
                             <div class="carousel-caption text-end">
                                 <h1>Elevate Your Style With Our New Collection.</h1>
                                 <p>Some representative placeholder content for the third slide of this carousel.</p>
-                                <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+                                <p><a class="btn btn-lg btn-primary custom-carousel-btn" href="#">Browse gallery</a></p>
                             </div>
                         </div>
                     </div>
@@ -144,69 +93,7 @@
                 </button>
             </div>
 
-            <div class="container marketing">    
-                <!-- START THE FEATURETTES -->
-                <style>
-                    /* Background sections */
-                    .jumbotron-bg {
-                        background-image: url('images/cat1.jpg');
-                        background-size: cover;
-                        background-position: center;
-                        color: #fff;
-                        position: relative;
-                    }
-                    .jumbotron-bg::before {
-                        content: "";
-                        position: absolute;
-                        inset: 0;
-                        background: rgba(0,0,0,0.35); /* darken for readability */
-                        z-index: 0;
-                        border-radius: .375rem;
-                    }
-                    .jumbotron-inner { position: relative; z-index: 1; }
-
-                    .bg-card-dark {
-                        background-image: url('images/cat6.jpg');
-                        background-size: cover;
-                        background-position: center;
-                        color: #fff;
-                    }
-                    .bg-card-dark::before {
-                        content: "";
-                        position: absolute;
-                        inset: 0;
-                        background: rgba(0,0,0,0.35);
-                        z-index: 0;
-                        border-radius: .375rem;
-                    }
-                    .bg-card-light {
-                        background-image: url('images/cat3.jpg');
-                        background-size: cover;
-                        background-position: center;
-                        color: #000;
-                    }
-                    .bg-card-light::before {
-                        content: "";
-                        position: absolute;
-                        inset: 0;
-                        background: rgba(255,255,255,0.35);
-                        z-index: 0;
-                        border-radius: .375rem;
-                    }
-                    .card-bg-inner { position: relative; z-index: 1; }
-
-                    .featurette-image-bg {
-                        background-size: cover;
-                        background-position: center;
-                        width: 100%;
-                        min-height: 300px;
-                        border-radius: .375rem;
-                    }
-
-                    @media (min-width: 768px) {
-                        .featurette-image-bg { min-height: 500px; }
-                    }
-                </style>
+            <div class="container marketing">  
                 <hr class="featurette-divider my-5">
                 <div class="container py-4">
                     <div class="p-5 mb-4 rounded-3 jumbotron-bg">
@@ -218,9 +105,7 @@
                                     <button class="btn btn-primary btn-lg" type="button">Discover</button>
                                 </div>
                                 <div class="col-md-5 text-center">
-                                    <!-- decorative (optional) small image on the right; kept as img for small preview -->
-                                    <!-- <img src="images/cat1.jpg" class="img-fluid rounded-3" alt="Jumbotron image" style="max-height:220px; object-fit:cover; opacity:0.95;"> -->
-                                </div>
+                                    </div>
                             </div>
                         </div>
                     </div>
@@ -246,58 +131,44 @@
                         </div>
                     </div>
                 </div>
-                <!-- /END THE FEATURETTES -->
-
-
                 <hr class="featurette-divider my-5">
 
 
-                <!-- Three columns of text below the carousel -->
                 <div class="row">
                     <div class="col-lg-4">
-                        <img src="images/hoodie.jpg" class="bd-placeholder-img rounded-circle" width="140" height="140" alt="Item 1" style="object-fit:cover;">
+                        <img src="images/hoodie.jpg" class="bd-placeholder-img rounded-circle item-image" width="140" height="140" alt="Item 1">
                         <h2>Hoodies</h2>
                         <p>Cozy, casual tops designed for everyday comfort. Perfect for layering and featuring a relaxed fit with a hood for added style.</p>
                         <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-                    </div><!-- /.col-lg-4 -->
-                    <div class="col-lg-4">
-                        <img src="images/Jackets.jpg" class="bd-placeholder-img rounded-circle" width="140" height="140" alt="Item 2" style="object-fit:cover;">
+                    </div><div class="col-lg-4">
+                        <img src="images/Jackets.jpg" class="bd-placeholder-img rounded-circle item-image" width="140" height="140" alt="Item 2">
                         <h2>Jackets</h2>
                         <p>Versatile outerwear crafted to protect against wind and cold. Combines function and fashion for year-round wear.</p>
                         <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-                    </div><!-- /.col-lg-4 -->
-                    <div class="col-lg-4">
-                        <img src="images/shoes.jpg" class="bd-placeholder-img rounded-circle" width="140" height="140" alt="Item 3" style="object-fit:cover;">
+                    </div><div class="col-lg-4">
+                        <img src="images/shoes.jpg" class="bd-placeholder-img rounded-circle item-image" width="140" height="140" alt="Item 3">
                         <h2>Shoes</h2>
                         <p>Durable footwear built for comfort, support, and style. Designed to fit every activity—from casual walks to all-day performance.</p>
                         <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-                    </div><!-- /.col-lg-4 -->
-                </div><!-- /.row -->
-            </div><!-- /.container -->
-
-            <!-- FOOTER -->
-            <footer class="container-fluid bg-light text-center py-4" style="width: 100%;">
+                    </div></div></div><footer class="container-fluid bg-light text-center py-4 custom-footer">
                 <div class="row">
                     <div class="col-md-4 d-flex align-items-center">
                         <img src="images/main-logo.png" alt="Site Logo" height="50" class="me-2">
                         <span class="fw-semibold"></span>
                     </div>
                     <div class="col-md-4">
-                        <a href="#"><i class="fab fa-facebook me-2" style="color: black;"></i></a>
-                        <a href="#"><i class="fab fa-twitter me-2" style="color: black;"></i></a>
-                        <a href="#"><i class="fab fa-instagram me-2" style="color: black;"></i></a>
+                        <a href="#"><i class="fab fa-facebook me-2 custom-social-icon"></i></a>
+                        <a href="#"><i class="fab fa-twitter me-2 custom-social-icon"></i></a>
+                        <a href="#"><i class="fab fa-instagram me-2 custom-social-icon"></i></a>
                     </div>
                     <div class="col-md-4 text-end">
-                        <p>Contact: (123) 456-7890  <br>boda@stockwhite.com</p>
+                        <p>Contact: (123) 456-7890  <br>boda@stockwhite.com</p>
                         <p>Address: 14 St, New Cairo,<br> Cairo, Egypt</p>
                     </div>
                 </div>
                 <p class="float-end"><a href="#">Back to top</a></p>
                 <p>&copy; 2017–2021 Stockwhite, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
             </footer>
-
-            <!-- Add Font Awesome for icons -->
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         </main>
         <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
     </body>
